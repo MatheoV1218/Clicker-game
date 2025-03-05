@@ -20,6 +20,10 @@ let minerIncrease = document.querySelector('.miner-increase');
 let parsedMinerIncrease = parseFloat(minerIncrease.innerHTML);
 let gps = 0;
 
+let gpcText = document.getElementById('gpc-text');
+let gpsText = document.getElementById('gps-text')
+
+
 let gpc = 1;
 function incrementGem(){
   gem.innerHTML = Math.round(parsedGem += gpc);
@@ -68,5 +72,7 @@ function buyMiner() {
 }
 setInterval(() => {
 parsedGem += gps / 10;
-gem.innerHTML = Math.round(parsedGem);
+gem.innerHTML = Math.round(parsedGem)
+gpcText.innerHTML = Math.round(gpc)
+gpsText.innerHTML = Math.round(gps)
 }, 100)
